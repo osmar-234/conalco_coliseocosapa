@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<!-- Mirrored from endete.art/interio/v100/store-dark.html by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 28 Aug 2019 19:38:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Coliseo Cosapa </title>
+	<meta content="" name="description">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="width=device-width" name="viewport">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<link href="img/favicon.png" rel="icon" type="image/png">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link href="css/bootstrap-dark.css" rel="stylesheet">
+	<link id="pagestyle" href="css/theme-dark.css" rel="stylesheet">
+</head>
+
+<body data-offset="50" data-spy="scroll" data-target=".navbar" class="dark-theme">
+	<nav class="navbar navbar-fixed-top shadow" id="js-nav">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" type="button">
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				</button>
+				
+				<a class="navbar-brand" href="#"> <img src="img/logo-white.png" alt="logo"> </a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="#home">Inicio</a></li>
+					<li><a href="#products">Galeria</a></li>
+					<li><a href="#about">Administradores del Coliseo</a></li>
+					<li><a href="#special">Tabla de posiciones</a></li>
+					<li><a href="#testimonials">Testimonios</a></li>
+					<li><a href="#news"></a></li>
+					<li><a href="#contact">Reservas de hora</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section class="home section image-slider" id="home">
+		<div class="home-slider text-center">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background: url(img/slider/slide2.jpg);">
+					<img src="img/logo-white.png" alt="store logo">
+					<h2 class="home-slider-title-main inverted">PRÁCTICANDO EL DEPORTE </h2>
+					<div class="home-buttons text-center"> <a href="#products" class="btn btn-lg  btn-primary">Ir a Galeria</a> </div>
+					<a class="arrow bounce text-center" href="#about"> <span class="ti-mouse"></span> <span class="ti-angle-double-down"></span> </a>
+				</div>
+
+				<div class="swiper-slide" style="background: url(img/slider/slide1.jpg);">
+					<img src="img/logo-white.png" alt="store logo">
+					<h2 class="home-slider-title-main inverted">COSAPA CUNA DE GRANDES DEPORTISTAS</h2>
+					<div class="home-buttons text-center"> <a href="#products" class="btn btn-lg  btn-primary">iR A GALERÍA</a> </div>
+					<a class="arrow bounce text-center" href="#about"> <span class="ti-mouse"></span> <span class="ti-angle-double-down"></span> </a>
+				</div>
+
+			</div>
+			<div class="home-pagination"></div>
+			<div class="home-slider-next right-arrow-negative"> <span class="ti-arrow-right"></span> </div>
+			<div class="home-slider-prev left-arrow-negative"> <span class="ti-arrow-left"></span> </div>
+		</div>
+	</section>
+
+	<span id="items-counter" class="h3 cart-items-counter" style="display: none">0</span>
+	<div class="cart-widget-container">
+	<div class="cart-widget text-center">
+	<a class="close" id="cart-widget-close">
+	<span class="ti-close"></span>
+	</a>
+	<img class="cart-logo" src="img/logo-white.png" width="200" alt="store logo">
+	<h3 class="section-heading">Your cart</h3>
+	<div id="cart-empty" class="cart-empty"><h4>is empty <span class="ti-face-sad icon"></span> </h4></div>
+	<!-- container for js inject cart items content -->
+	<div class="items-container" id="items"></div>
+	<!-- container for js inject cart items content -->
+
+	<div class="cart-delivery" id="cart-delivery">
+	<h4 class="section-heading">Delivery option</h4>
+		<div class="custom-radio">
+			<input id="radio1" type="radio" name="delivery" value="10.00" checked> 
+			<label for="radio1">domestic delivery ($10)</label>
+		</div>
+
+		<div class="custom-radio">
+			<input id="radio2" type="radio" name="delivery" value="15.00"> 
+			<label for="radio2">express domestic delivery ($15) </label>
+		</div>
+
+		<div class="custom-radio">
+			<input id="radio3" type="radio" name="delivery" value="20.00"> 
+			<label for="radio3">worldwide delivery ($20)</label>
+		</div>
+	</div>
+	<div class="cart-summary" id="cart-summary">
+	<h4 class="section-heading">summary</h4>
+		<div class="cart-summary-row" id="cart-total">Total products <span class="cart-value">$<span id="cost_value">0.00</span></span></div>
+		<div class="cart-summary-row">Shipping <span class="cart-value">$<span id="cost_delivery"></span></span></div>
+		<div class="cart-summary-row cart-summary-row-total">Total <span class="cart-value">$<span id="total-total"></span></span></div>
+	</div>
+
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="cart-form" id="cart-form">
+		<!-- Identify your business so that you can collect the payments. -->
+		<input type="hidden" name="business" value="yourpaypal@email.com">
+		<!-- Specify a Buy Now button. -->
+		<input type="hidden" name="cmd" value="_xclick">
+		<!-- Specify details about the item that buyers will purchase. -->
+		<input type="hidden" name="item_name" value="Interio store - checkout">
+		<input type="hidden" name="amount" id="amount" value="">
+		<input type="hidden" name="currency_code" value="USD">
+		<!-- Display the payment button. -->
+		<button type="submit" name="submit" class="btn btn-default btn-lg">
+		pay pal checkout <span class="ti-arrow-right"></span>
+		</button>
+	</form>
+	</div>
+	<div class="cart-widget-close-overlay"></div>
+	</div>
+
+	<section class="section-min section product" id="products">
+		<div class="container overflow-hidden">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="section-heading">RECUERDOS</h3>
+				</div>
+				<div class="col-md-12">
+					<div class="product-list-slider">
+						<ul class="swiper-wrapper product-list product-list-vertical">
+							<li class="swiper-slide wow fadeInUp text-center" data-wow-delay=".2s"> 
+								<span class="product-list-left pull-left">
+									<a href="#" data-target="#product-01" data-toggle="modal"><img alt="product image" class="product-list-primary-img" src="img/product.png"> 
+										<img alt="product image" class="product-list-secondary-img" src="img/product0.png">
+									</a>
+								</span> 
+
+								<a href="#" data-target="#product-01" data-toggle="modal">
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h4">Equipo posando para la posperidad</span>
+										<span class="product-list-price">2020</span>
+									</span>
+								</a> 
+
+									
+							</li>
+							
+							<li class="swiper-slide wow fadeInUp text-center" data-wow-delay=".4s"> 
+								<span class="product-list-left pull-left">
+									<a href="#" data-target="#product-01" data-toggle="modal"><img alt="product image" class="product-list-primary-img" src="img/product4.png"> 
+									<img alt="product image" class="product-list-secondary-img" src="img/product44.png">
+									</a>
+								</span> 
+
+								<a href="#" data-target="#product-01" data-toggle="modal">
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h4">JOVEN DEPORTISTA DEMOSTRANDO SUS HABILIDADES</span>
+										<span class="product-list-price">PLURIS-COSAPA 2019</span>
+									</span>
+								</a>
+
+			
+							</li>
+
+							<li class="swiper-slide wow fadeInUp text-center" data-wow-delay=".6s"> 
+								<span class="product-list-left pull-left">
+									<a href="#" data-target="#product-01" data-toggle="modal"><img alt="product image" class="product-list-primary-img" src="img/product2.png"> 
+									<img alt="product image" class="product-list-secondary-img" src="img/product22.png">
+									</a>
+								</span> 
+
+								<a href="#" data-target="#product-01" data-toggle="modal">
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h4">JÓVENES DEPORTISTAS DE LA U.E. NACIONAL COSAPA </span>
+										<span class="product-list-price">PLURIS-COSAPA 2019</span>
+									</span>
+								</a> 
+		
+							</li>
+							
+							<li class="swiper-slide wow fadeInUp text-center" data-wow-delay=".8s"> 
+								<span class="product-list-left pull-left">
+									<a href="#" data-target="#product-01" data-toggle="modal"><img alt="product image" class="product-list-primary-img" src="img/product3.png"> 
+									<img alt="product image" class="product-list-secondary-img" src="img/33.png">
+									</a>
+								</span> 
+
+								<a href="#" data-target="#product-01" data-toggle="modal">
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h4">SEÑORITAS DEPORTISTAS DE LA U.E. NACIONAL COSAPA</span>
+										<span class="product-list-price">CAMPENOAS FUTSAL DAMAS</span>
+									</span>
+								</a>
+
+								<button class="btn btn-default add-item" type="button" data-image="img/product3.png" data-name="Textile classic yellow chair no. 2" data-cost="500.00" data-id="4" >
+									<span class=""></span>PLURIS-COSAPA 2020
+								</button> 	
+							</li>
+
+							<li class="swiper-slide text-center"> 
+								<span class="product-list-left pull-left">
+									<a href="#" data-target="#product-01" data-toggle="modal"><img alt="product image" class="product-list-primary-img" src="img/2.png"> 
+									<img alt="product image" class="product-list-secondary-img" src="img/22.png">
+									</a>
+								</span> 
+
+								<a href="#" data-target="#product-01" data-toggle="modal">
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h4">INAGURACIÓN DEL CAMPEONATO INTER COLEGIALES</span>
+										<span class="product-list-price">PLURIS-COSAPA 2019</span>
+									</span>
+								</a> 
+
+								<button class="btn btn-default add-item" type="button" data-image="img/product.png" data-name="Textile classic grey chair no. 3" data-cost="600.00" data-id="5" >
+									<span class=""></span>U.E. NACIONAL COSAPA
+								</button> 		
+							</li>
+							
+							<li class="swiper-slide text-center"> 
+								<span class="product-list-left pull-left">
+									<a href="#" data-target="#product-01" data-toggle="modal"><img alt="product image" class="product-list-primary-img" src="img/11.png"> 
+									<img alt="product image" class="product-list-secondary-img" src="img/1.png">
+									</a>
+								</span> 
+
+								<a href="#" data-target="#product-01" data-toggle="modal">
+									<span class="product-list-right pull-left">
+										<span class="product-list-name h4">BANNER- PLURIS 2019</span>
+										<span class="product-list-price">COSAPA</span>
+									</span>
+								</a>
+
+								<button class="btn btn-default add-item" type="button" data-image="img/product3.png" data-name="Textile classic yellow chair no. 3" data-cost="500.00" data-id="6" >
+									<span class=""></span>PLURIS- FASE PREVIA
+								</button> 	
+							</li>
+						</ul>
+						<!-- Add Pagination -->
+						<div class="product-list-pagination text-center"> </div>
+						<div class="product-list-slider-next right-arrow-negative"> <span class="ti-arrow-right"></span> </div>
+						<div class="product-list-slider-prev left-arrow-negative"> <span class="ti-arrow-left"></span> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- PRODUCT MODAL -->
+		<div class="modal fade product-modal" id="product-01" role="dialog" tabindex="-1">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content shadow">
+					<a class="close" data-dismiss="modal"> <span class="ti-close"></span></a>
+					<div class="modal-body">
+						<!-- Wrapper for slides -->
+						<div class="carousel slide product-slide" id="product-carousel">
+							<div class="carousel-inner cont-slider">
+								<div class="item active"> <img alt="" src="img/product.png" title=""> </div>
+								<div class="item"> <img alt="" src="img/product2.png" title=""> </div>
+								<div class="item"> <img alt="" src="img/product3.png" title=""> </div>
+								<div class="item"> <img alt="" src="img/product4.png" title=""> </div>
+							</div>
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li class="active" data-slide-to="0" data-target="#product-carousel"> <img alt="" src="img/product.png"> </li>
+								<li class="" data-slide-to="1" data-target="#product-carousel"> <img alt="" src="img/product2.png"> </li>
+								<li class="" data-slide-to="2" data-target="#product-carousel"> <img alt="" src="img/product3.png"> </li>
+								<li class="" data-slide-to="3" data-target="#product-carousel"> <img alt="" src="img/product4.png"> </li>
+							</ol>
+						</div>
+						<!-- Wrapper for slides -->
+						<div class="container">
+							<div class="row">
+								
+								
+									<div class="product-tabs">
+										
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- / PRODUCT MODAL -->
+	</section>
+
+	<section class="about" id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="section-heading">Administradores del Coliseo</h3>
+				</div>
+				<div class="col-md-7 overflow-hidden wow fadeInLeft">
+					<h4>Organización</h4>
+					<p>Para su funcionamiento el coliseo "Evo Morales", desde su inaguracon el año 2014, esta adiminstrado por el o la Sub Alcalde, colaborado por sus familiares</p>	
+				</div>
+				<div class="col-md-4 col-md-push-1 wow fadeInRight">
+					<h4>Cargos</h4>
+					<ul class="styled-list">
+						<li>1. Sub Alcalde </li>
+						<li>2. Secretario de Hacienda</li>
+						<li>3. Ayudante</li>
+						<li>Cel.: 73005449</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="countdown" id="special">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="section-heading">TABLA DE POSICIONES</h3>
+				</div>
+				<div class="col-md-5">
+					<ul class="product-list product-list-vertical">
+						<li class="wow fadeInUp" data-wow-delay=".2s">
+							<span class="product-list-left pull-left">
+									<a href="#" data-target="#product-01" data-toggle="modal">
+										<img alt="product image" class="product-list-primary-img" src="img/TABLA.png"> 
+										</a>
+							</span>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-7 text-center">
+					<div class="countdown-container">
+						<h3 class="wow fadeInDown">Vea la posición de su equipo</h3>
+						<p class="wow fadeInDown"> En esta sección podra ver en que posición se encuentra su equipo
+							<!-- data in countdown ul from js -->
+						
+						<!-- data in countdown ul from js --><span class="countdown-price h3 wow fadeInUp">DÍAS DEL EVENTO</span>
+						<button type="button" class="btn btn-default add-item wow swing" data-image="img/product.png" data-name="Yellow textile chair [promo]" data-cost="420.00" data-id="9">
+							<span class=""></span>CAMPEONATO
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="testimonials" id="testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="section-heading">Testimonios</h3>
+				</div>
+				<div class="testimonials-slider text-center col-md-12">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="testimonials-container shadow"> <img alt="user avatar" class="wow fadeInUp" src="img/test.png">
+								<h3 class="wow fadeInUp" data-wow-delay=".4s">Carmen Aide<span>Est. Unidad Educativa Naional Cosapa</span> </h3>
+								<p class="wow fadeInUp" data-wow-delay=".6s">El Coliseo tiene una buena estructura, es una de las mejores Canchas donde tengo el privilegio de jugar </p> 
+
+								</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="testimonials-container shadow"> <img alt="user avatar" class="wow fadeInUp" src="img/test2.png">
+								<h3 class="wow fadeInUp" data-wow-delay=".4s">Rosa Marca Tellez <span>Est. Deportista</span> </h3>
+								<p class="wow fadeInUp" data-wow-delay=".6s">El Coliseo "Evo Morales" me trae gratos recuerdos aqui fue donde salimos campeonas en futsal Damas el 2019. </p>	
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="testimonials-container shadow"> <img alt="user avatar" class="wow fadeInUp" src="img/test3.png">
+								<h3 class="wow fadeInUp" data-wow-delay=".4s"> Joel Alvarez<span>Deportista</span> </h3>
+								<p class="wow fadeInUp" data-wow-delay=".6s"> Hermoso campo deportivo que se tiene en la poblacion de Cosapa, me agrado bastante jugar en este Coliseo.</p>	</div>
+						</div>
+					</div>
+					<div class="testimonials-pagination"></div>
+					<div class="testimonials-slider-next right-arrow-negative"> <span class="ti-arrow-right"></span> </div>
+					<div class="testimonials-slider-prev left-arrow-negative"> <span class="ti-arrow-left"></span> </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="text-center shadow section section-min">
+		<div class="about-counter" id="about-counter">
+			
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 wow fadeInLeft about-counter-single" data-wow-delay="0.2s" data-wow-duration="1s" data-wow-offset="0">
+						<div class="counter"> <span class="ti-crown icon"></span>
+							<h2 class="timer">250</h2>
+							<p> Projects Finished </p>
+						</div>
+					</div>
+					<div class="col-md-3 wow fadeInLeft about-counter-single" data-wow-delay="0.3s" data-wow-duration="1s" data-wow-offset="0">
+						<div class="counter"> <span class="ti-shortcode icon"></span>
+							<h2 class="timer">28256</h2>
+							<p> Line Of Coding </p>
+						</div>
+					</div>
+					<div class="col-md-3 wow fadeInLeft about-counter-single" data-wow-delay="0.4s" data-wow-duration="1s" data-wow-offset="0">
+						<div class="counter"> <span class="ti-cup icon"></span>
+							<h2 class="timer">42</h2>
+							<p> Award Won </p>
+						</div>
+					</div>
+					<div class="col-md-3 wow fadeInLeft" data-wow-delay="0.5s" data-wow-duration="1s" data-wow-offset="0">
+						<div class="counter"> <span class="ti-comments-smiley icon"></span>
+							<h2 class="timer">240</h2>
+							<p> Satisfied Clients </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section id="contact" class="contact contact-with-map">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="section-heading">Reservas</h3>
+				</div>
+				<div class="col-md-3">
+					<div class="contact-data">
+						<ul>
+							<li><span class="ti-mobile icon"></span>73005449</li>
+							<li><span class="ti-email icon"></span>coliseo-cosapa@gmail.com</li>
+							
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-8 col-md-push-1">
+					<div class="contact-form">
+						<form>
+							<div class="form-group">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required>
+							</div>
+
+							<div class="form-group">
+								<input type="text" class="form-control" id="contact-email" name="contact-email" placeholder="Correo electrónico" required>
+							</div>
+
+							<div class="form-group">
+								<input type="text" class="form-control" id="mobile" name="mobile" placeholder="Número de Celular" required>
+							</div>
+
+							<div class="form-group">
+								<input type="text" class="form-control" id="subject" name="subject" placeholder="Consulta" required>
+							</div>
+
+							<div class="form-group">
+								<textarea class="form-control" id="message" placeholder="Mensage" maxlength="140" rows="7"></textarea>
+							</div>
+
+							<button type="button" id="submit" name="submit" class="btn btn-primary btn-lg text-center float-right">Enviar mensaje</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="google-maps">
+			<div id="map-canvas"></div>
+		</div>
+	</section>
+
+	<div class="section section-min">
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-md-push-4 text-center"> <img class="footer-logo" src="img/logo-white.png" alt="footer-logo">
+						<div class="social">
+							<ul>
+								<li><a href="http://facebook.com/" target="_blank"><span class="ti-facebook"></span></a></li>
+								<li><a href="https://twitter.com/" target="_blank"><span class="ti-twitter-alt"></span></a></li>
+								<li><a href="http://linkedin.com/" target="_blank"><span class="ti-linkedin"></span></a></li>
+								<li><a href="https://vimeo.com/" target="_blank"><span class="ti-vimeo-alt"></span></a></li>
+								<li><a href="http://youtube.com/" target="_blank"><span class="ti-youtube"></span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="col-md-4 col-md-offset-4 col-sm-12">
+						<div class="footer-newsletter">
+							<div class="center text-center">
+								<h4>Siguenos por nuestras redes sociales</h4>
+								<form action="#" method="post">
+									<div class="input-group">
+										<input class="form-control" type="text" placeholder="e-mail"> 
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button"><span class="ti-arrow-right"></span></button>
+										</span>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/vendor/wow.js"></script>
+	<script src="js/vendor/jquery-1.11.2.min.js"></script>
+	<script src="js/vendor/swiper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/vendor/jquery.countTo.js"></script>
+	<script src="js/vendor/jquery.inview.js"></script>
+	<script src="js/vendor/jquery.countdown.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_6m6Glf1-P7jvVdHZ00e3Ue_EoUNe39g"></script>
+	<script src="js/tt-cart.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+<!-- Mirrored from endete.art/interio/v100/store-dark.html by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 28 Aug 2019 19:42:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>
